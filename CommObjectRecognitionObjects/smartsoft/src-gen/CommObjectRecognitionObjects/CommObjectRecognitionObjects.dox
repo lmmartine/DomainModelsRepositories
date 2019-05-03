@@ -98,6 +98,46 @@ Structure of Communication Object:
 - type: CommObjectRecognitionObjects::RelationType 
 - relatedObjectId: UInt32 
 
+\class CommObjectRecognitionObjects::CommObjectRecognitionInformationCore
+
+Structure of Communication Object:
+- id: UInt32 
+- roi: CommObjectRecognitionObjects::ROI 
+
+\class CommObjectRecognitionObjects::CommColorDetectionCore
+
+Structure of Communication Object:
+- color: CommObjectRecognitionObjects::Color 
+- roi: CommObjectRecognitionObjects::ROI 
+
+\class CommObjectRecognitionObjects::ColorCore
+"Basic Perception"
+
+Structure of Communication Object:
+- name: CommObjectRecognitionObjects::Colors 
+- min_range: CommObjectRecognitionObjects::BGRSpace 
+- max_range: CommObjectRecognitionObjects::BGRSpace 
+
+\class CommObjectRecognitionObjects::BGRSpaceCore
+
+Structure of Communication Object:
+- b: Double  = 0.0 
+- g: Double  = 0.0 
+- r: Double  = 0.0 
+
+\class CommObjectRecognitionObjects::ROICore
+
+Structure of Communication Object:
+- point: CommObjectRecognitionObjects::CommPoint2d 
+- width: Double  = 0.0 
+- height: Double  = 0.0 
+
+\class CommObjectRecognitionObjects::CommPoint2dCore
+
+Structure of Communication Object:
+- x: Double  = 0.0 
+- y: Double  = 0.0 
+
 \class CommObjectRecognitionObjects::ObjectRecognitionState
 
 Structure of Enumeration:
@@ -117,6 +157,14 @@ Structure of Enumeration:
 - UNKOWN 
 - OBJECT_FOUND 
 - OBJECT_NOT_FOUND 
+
+\class CommObjectRecognitionObjects::Colors
+
+Structure of Enumeration:
+- RED 
+- BLUE 
+- WHITE 
+- GRAY 
 
 
 
@@ -227,6 +275,45 @@ Class Reference: CommObjectRecognitionObjects::CommTriMeshCore
 
 Class Reference: CommObjectRecognitionObjects::CommObjectRelationCore
 <hr>
+@section CommObjectRecognitionInformation CommObjectRecognitionInformation
+- id: UInt32  
+- roi: @ref ROI (CommObj) 
+
+Class Reference: CommObjectRecognitionObjects::CommObjectRecognitionInformationCore
+<hr>
+@section CommColorDetection CommColorDetection
+- color: @ref Color (CommObj) 
+- roi: @ref ROI (CommObj) 
+
+Class Reference: CommObjectRecognitionObjects::CommColorDetectionCore
+<hr>
+@section Color Color
+- name: @ref Colors (Enum) 
+- min_range: @ref BGRSpace (CommObj) 
+- max_range: @ref BGRSpace (CommObj) 
+
+Class Reference: CommObjectRecognitionObjects::ColorCore
+<hr>
+@section BGRSpace BGRSpace
+- b: Double   = 0.0 
+- g: Double   = 0.0 
+- r: Double   = 0.0 
+
+Class Reference: CommObjectRecognitionObjects::BGRSpaceCore
+<hr>
+@section ROI ROI
+- point: @ref CommPoint2d (CommObj) 
+- width: Double   = 0.0 
+- height: Double   = 0.0 
+
+Class Reference: CommObjectRecognitionObjects::ROICore
+<hr>
+@section CommPoint2d CommPoint2d
+- x: Double   = 0.0 
+- y: Double   = 0.0 
+
+Class Reference: CommObjectRecognitionObjects::CommPoint2dCore
+<hr>
 @section ObjectRecognitionState ObjectRecognitionState
 - VISIBLE 
 - INVISIBLE 
@@ -246,6 +333,14 @@ Class Reference: CommObjectRecognitionObjects::RelationType
 - OBJECT_NOT_FOUND 
 
 Class Reference: CommObjectRecognitionObjects::SimpleObjectState
+<hr>
+@section Colors Colors
+- RED 
+- BLUE 
+- WHITE 
+- GRAY 
+
+Class Reference: CommObjectRecognitionObjects::Colors
 <hr>
 
 

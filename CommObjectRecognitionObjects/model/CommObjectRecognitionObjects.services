@@ -7,10 +7,25 @@ ServiceDefRepository CommObjectRecognitionObjects version 1.0 {
 		>
 	}
 
+	
+	RequestAnswerServiceDefinition ObjectRecognitionQueryService {
+		QueryPattern <
+			RequestType = CommObjectRecognitionObjects.CommObjectRecognitionInformation
+			AnswerType = CommObjectRecognitionObjects.CommObjectRecognitionObjectProperties
+		>
+	}
+	
 	RequestAnswerServiceDefinition EnvironmentQueryService {
 		QueryPattern <
 			RequestType = CommObjectRecognitionObjects.CommObjectRecognitionId
 			AnswerType = CommObjectRecognitionObjects.CommObjectRecognitionEnvironment
+		>
+	}
+
+	RequestAnswerServiceDefinition ColorQueryService {
+		QueryPattern <
+			RequestType = CommObjectRecognitionObjects.CommColorDetection
+			AnswerType = CommObjectRecognitionObjects.CommPoint2d
 		>
 	}
 	

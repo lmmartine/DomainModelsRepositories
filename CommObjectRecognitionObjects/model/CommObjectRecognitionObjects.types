@@ -107,4 +107,47 @@ CommObjectsRepository CommObjectRecognitionObjects version 1.0 {
 		relatedObjectId: UInt32
 	}
 	
+	CommObject CommObjectRecognitionInformation {
+		id: UInt32
+		roi: ROI
+	}
+	
+	CommObject CommColorDetection {
+		color: Color
+		roi: ROI
+	}
+	
+		/*
+		 * "Basic Perception"
+		 */
+		 
+	CommObject Color {
+		name: Colors
+		min_range: BGRSpace
+		max_range: BGRSpace
+	}
+	
+	Enumeration Colors {
+		RED
+		BLUE
+		WHITE
+		GRAY
+	}	
+	CommObject BGRSpace {
+		b: Double = 0.0
+		g: Double = 0.0
+		r: Double = 0.0
+	}
+	
+	CommObject ROI {
+		point: CommPoint2d
+		width: Double = 0.0
+		height: Double = 0.0
+	}
+	
+	CommObject CommPoint2d {
+		x: Double = 0.0
+		y: Double = 0.0
+	}
+	
 }
